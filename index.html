@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>진격의 거인: 문화적 융합의 미학</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --titan-brown-main: #5d4037;
+            --titan-brown-light: #8d6e63;
+            --titan-brown-dark: #3e2723;
+            --titan-gold: #c5a059;
+            --titan-paper: #d7ccc8;
+        }
+
+        body {
+            background-image: linear-gradient(rgba(93, 64, 55, 0.8), rgba(93, 64, 55, 0.8)), 
+                              url('https://images.unsplash.com/photo-1520758594221-872948699332?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8JUVCJUIyJUJEJUVCJThGJThDJTIwJUVCJUIwJUIwJUVBJUIyJUJEJUVEJTk5JTk0JUVCJUE5JUI0fGVufDB8fDB8fHww');
+            background-attachment: fixed;
+            background-size: cover;
+            color: var(--titan-dark-brown);
+            font-family: 'Noto Serif KR', serif;
+            margin: 0;
+            overflow-x: hidden;
+            word-break: keep-all;
+        }
+
+        .cinzel {
+            font-family: 'Cinzel', serif;
+        }
+
+        header {
+            background: linear-gradient(rgba(62, 39, 35, 0.6), rgba(62, 39, 35, 0.6)), 
+                        url('https://visla.kr/wp/wp-content/uploads/2024/01/20240116_0.jpg');
+            background-size: cover;
+            background-position: center;
+            border-bottom: 6px solid var(--titan-brown-dark);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .case-card {
+            background: rgba(245, 245, 245, 0.95);
+            border: 3px solid var(--titan-brown-main);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 5rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            color: #3e2723;
+        }
+
+        .case-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(93, 64, 55, 0.4);
+            border-color: var(--titan-gold);
+        }
+
+        .case-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: var(--titan-brown-main);
+        }
+
+        .img-container {
+            width: 100%;
+            height: 550px;
+            background-color: #efebe9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-bottom: 2px solid var(--titan-brown-main);
+        }
+
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 1;
+            transition: transform 0.6s ease;
+        }
+
+        .case-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .final-image-section {
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            margin-top: 4rem;
+            margin-bottom: 0;
+            line-height: 0;
+        }
+
+        .final-image-wrapper {
+            width: 100%;
+            border-top: 8px solid var(--titan-brown-dark);
+            overflow: hidden;
+        }
+
+        .final-image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: sepia(20%) contrast(110%);
+        }
+
+        footer {
+            background: var(--titan-brown-dark);
+            border-top: 4px solid var(--titan-gold);
+            padding: 80px 0;
+            text-align: center;
+            color: var(--titan-paper);
+        }
+
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #efebe9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--titan-brown-main);
+            border-radius: 10px;
+            border: 3px solid #efebe9;
+        }
+
+        .term-definition {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: rgba(93, 64, 55, 0.05);
+            border-left: 4px solid var(--titan-gold);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #5d4037;
+        }
+
+        .sub-title-kr {
+            display: block;
+            font-size: 1.25rem;
+            font-family: 'Noto Serif KR', serif;
+            font-weight: 700;
+            color: var(--titan-brown-light);
+            margin-top: -0.5rem;
+            letter-spacing: 0.1em;
+        }
+
+        /* 비교 섹션 스타일 */
+        .comparison-box {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .comparison-item {
+            text-align: center;
+        }
+        .comparison-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 2px solid var(--titan-paper);
+            margin-bottom: 0.5rem;
+        }
+        .comparison-label {
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: var(--titan-brown-main);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="py-44 px-6 text-center">
+        <h1 class="cinzel text-6xl md:text-8xl mb-6 tracking-[0.2em] text-white">ATTACK ON TITAN</h1>
+        <p class="text-2xl md:text-3xl text-gray-100 font-light italic">진격의 거인</p>
+        <div class="mt-12 w-64 h-2 bg-white/30 mx-auto rounded-full"></div>
+    </header>
+
+    <main class="max-w-5xl mx-auto py-24 px-6">
+        <div class="text-center mb-24">
+            <h2 class="text-4xl md:text-5xl font-bold mb-8 text-white tracking-tight drop-shadow-md">문화적 융합 사례 분석</h2>
+            <p class="text-xl md:text-2xl text-white opacity-90">신화, 역사, 그리고 캐릭터 설계에 투영된 서구적 요소</p>
+        </div>
+
+        <div class="flex flex-col space-y-24">
+            
+            <!-- 사례 1: 에렌 예거 -->
+            <section class="case-card rounded-3xl">
+                <div class="img-container">
+                    <img src="https://blog.kakaocdn.net/dna/cXJVXm/btr4tO3HIHK/AAAAAAAAAAAAAAAAAAAAAJmhQREIFPeYb1sw-E1tpQYcDuquLLMWUnNJVQmrThcr/img.gif?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1767193199&allow_ip=&allow_referer=&signature=89clFjfPbB1A6kTgN8CnLzqdYto%3D" alt="[에렌 예거]">
+                </div>
+                <div class="p-16 text-center md:text-left">
+                    <div class="mb-8 border-b-2 border-[#d7ccc8] pb-4 inline-block">
+                        <h3 class="cinzel text-4xl text-[#5d4037]">01. CHARACTER DESIGN</h3>
+                        <span class="sub-title-kr">캐릭터 설계의 동서양 융합</span>
+                    </div>
+                    <p class="text-2xl leading-relaxed">
+                        주인공 <strong>'에렌 예거'</strong>는 일본 애니메이션의 전형적인 틀을 따르면서도, 독일어권 이름과 '사냥꾼'을 뜻하는 예거(Yeager)라는 성씨를 사용하여 이질적인 매력을 부여했습니다. 날카로운 서구적 이목구비와 서사 구조의 결합은 동양적 감성에 <strong>서양적 페르소나</strong>를 성공적으로 이식한 독보적인 사례로 꼽힙니다.
+                    </p>
+                    
+                    <div class="term-definition">
+                        <strong>* 서양적 페르소나:</strong> 작품 속 캐릭터가 겉모습이나 이름, 가치관 등에서 서구 문화권의 특징을 입고 나타나는 '외적 인격' 또는 '사회적 가면'을 의미합니다.
+                    </div>
+                </div>
+            </section>
+
+            <!-- 사례 2: 벽과 중세 유럽 -->
+            <section class="case-card rounded-3xl">
+                <div class="img-container">
+                    <img src="https://i.namu.wiki/i/SDuK6PtSgy1qNSjKFMO8cFetqXwdj8A9I7Zg2kw-zKoJiL0w_49zxKllbjn0KKxeEd0v__3xLc_dhJontxNNyw.webp" alt="[방벽 내부의 중세 도시]">
+                </div>
+                <div class="p-16 text-center md:text-left">
+                    <div class="mb-8 border-b-2 border-[#d7ccc8] pb-4 inline-block">
+                        <h3 class="cinzel text-4xl text-[#5d4037]">02. HISTORICAL SETTING</h3>
+                        <span class="sub-title-kr">중세 유럽 성곽 도시의 재해석</span>
+                    </div>
+                    <p class="text-2xl leading-relaxed">
+                        인류의 생존을 지탱하는 세 개의 거대한 <strong>방벽(Wall)</strong>과 그 내부에 형성된 도시들은 독일의 <strong>'뇌르틀링겐(Nördlingen)'</strong>과 같은 중세 유럽의 성곽 도시에서 모티브를 얻었습니다. 정교한 고전 건축 양식과 일본 특유의 디테일한 묘사가 만나, 현실 세계의 역사와 판타지적 상상력이 공존하는 독특한 세계관을 완성했습니다.
+                    </p>
+
+                    <!-- 실제 도시 비교 섹션 -->
+                    <div class="comparison-box">
+                        <div class="comparison-item">
+                            <img src="https://t1.daumcdn.net/cfile/blog/993225365BDFDE360A" alt="[독일 뇌르틀링겐 전경]">
+                            <p class="comparison-label">실제 독일 뇌르틀링겐</p>
+                        </div>
+                        <div class="comparison-item">
+                            <img src="https://i.namu.wiki/i/QM8us4SnGC1xJw2JtE90koVvyRD766DnTNu7pER_mDdW-IBrrfcMGsZ8TvHAT_ue4lX0MEu7HTfQHBXtM3tGzg.webp" alt="[작품 속 시간시나 구 전경]">
+                            <p class="comparison-label">작품 속 '시간시나 구'</p>
+                        </div>
+                    </div>
+                    <div class="term-definition">
+                        <strong>* 디자인적 연결:</strong> 붉은 기와지붕과 원형으로 둘러싸인 견고한 성벽은 뇌르틀링겐의 특징을 그대로 반영하여 시청자들에게 압도적인 현실감과 몰입감을 제공합니다.
+                    </div>
+                </div>
+            </section>
+
+            <!-- 사례 3: 거인의 기원과 북유럽 신화 -->
+            <section class="case-card rounded-3xl">
+                <div class="img-container">
+                    <img src="https://i.namu.wiki/i/maeGDqBbebrTcoM-aC70VM2SGTqTzJAJlq1nhkhk7kBMKpcFXyo5-nBx1jVnnnCfgyuDDFhSbgD3IEfuMdeMeg.gif" alt="[북유럽 신화적 상징성]">
+                </div>
+                <div class="p-16 text-center md:text-left">
+                    <div class="mb-8 border-b-2 border-[#d7ccc8] pb-4 inline-block">
+                        <h3 class="cinzel text-4xl text-[#5d4037]">03. MYTHOLOGICAL FUSION</h3>
+                        <span class="sub-title-kr">북유럽 신화와 현대적 판타지의 결합</span>
+                    </div>
+                    <p class="text-2xl leading-relaxed">
+                        작품의 근간이 되는 거인의 탄생은 <strong>북유럽 신화</strong>의 창세 전설을 현대적으로 변주한 것입니다. 모든 거인의 시조인 '유미르'라는 이름은 신화 속 최초의 거인 <strong>'이미르(Ymir)'</strong>를 직접적으로 상징하며, 아홉 거인의 설정 또한 신화 속 <strong>아홉 개의 세계</strong>와 맞닿아 있습니다. 일본의 괴수 문화에 서구의 거대 서사를 융합함으로써, 단순한 오락물을 넘어 인류 공통의 원형적 공포와 신비로움을 자아내는 깊이 있는 예술성을 획득했습니다.
+                    </p>
+
+                    <div class="term-definition">
+                        <strong>* 이미르(Ymir):</strong> 북유럽 신화에서 혼돈의 시기에 탄생한 최초의 거인입니다. 그의 몸이 해체되어 세상의 하늘, 땅, 바다 등이 만들어졌다는 전설은 작품 속 '시조의 거인' 설정에 핵심적인 모티브가 되었습니다.
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <div class="final-image-section">
+        <div class="final-image-wrapper">
+            <img src="https://i.namu.wiki/i/N8qeLsxxjPBMa2Aw-BdqHfvyEXRWCZHPyzV3Z-XXOdz7HivicfOj80-X6JyLbznh_g540WFDBTm_2mMyI7ukvw.webp" alt="[마지막 이미지]">
+        </div>
+    </div>
+
+    <footer>
+        <div class="mb-8 cinzel tracking-[0.3em] text-3xl text-white">SHINGEKI NO KYOJIN</div>
+        <p class="text-xl opacity-70">© 2025 문화적 융합 사례 분석 프로젝트</p>
+        <p class="text-base mt-4 italic tracking-wide opacity-50">10613 송유안</p>
+    </footer>
+
+</body>
+</html>
